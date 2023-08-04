@@ -1,0 +1,55 @@
+*{
+    margin: 0 auto ;
+    padding: 0;
+    box-sizing: border-box;
+}
+.header-block{
+    width: 1440px;
+    height: 95px;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    display: inline-block;
+    .header-logo>img{
+       position: relative;
+       float: left;
+       top: 1.50rem;
+    }
+    .header-main-menu p{
+        position: relative;       
+        top: 1.70rem;
+        display: inline-flex;      
+       right: 10rem;        
+    }
+    .header-main-menu:hover{
+        text-decoration: underline;
+        transition: width 0.3s ease-out; /*задаём время анимации*/    
+        font-weight: 700;              
+    }
+    .header-main-menu p::before {
+        content: '\00A0'; /* Вставляем символ неразрывного пробела */
+        margin-right: 4rem; /* Расстояние между словами (при необходимости, измените на желаемое) */
+    }
+    .header-like>img{
+        position: relative; 
+        left: 25rem;
+        margin-left: 2.50rem;  
+        bottom: -0.25rem;  
+    }
+    .header-button>button{
+        width: 126px;
+        height: 46px;
+        border-radius: 12px;
+        background-color: #7984C0;
+        border: none;
+        font-weight: 500;
+        font-size: 16px;
+        color: white;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        float: right;
+        bottom: 2rem;
+    }
+                  
+}

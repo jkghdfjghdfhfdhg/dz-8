@@ -1,23 +1,62 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import Search from "./Search/Search";
+import "./Header/Header.css";
+import Header from "./Header/Header";
+import "./Search/Search.css";
+import Main from "./Main/Question";
+import "./Main/Main.css";
+import Question from "./Main/Question";
+import Footer from "./Footer/Footer";
+import "./Footer/Footer.css";
 function App() {
+  const questionsAndAnswers = [
+    {
+      question:
+        "В посылке пришел не мой заказ (любая другая вещь, которую я не заказывал), что делать?",
+      answer:
+        "Для начала свяжитесь с нами (обратная связь, сообщение в паблике). Для разрешения ситуации - необходимо предоставить фото распаковки товара на почте. Именно эти данные будут запрашиваться у обеих сторон спора.",
+    },
+    {
+      question: "Я оплатил заказ, но продавец не выходит на связь, что делать?",
+      answer:
+        "Если продавец не принял заказ, то он отменяется автоматически в течении 48 часов, а ваши средства вернутся вам в течении 1-3 рабочих дней. Вы также можете отменить заказ самостоятельно. Если продавец принял заказ, но не отправляет посылку в течении 3-х дней, отмените сделку, и в течении 1-3 дней ваши средства вернутся вам на карту. В обоих случаях, желательно связаться с продавцом через личные сообщения на сайте.",
+    },
+    {
+      question: "Я опечатался/указал неверный адрес",
+      answer:
+        "Если заказ еще не сделан ,то мы можешь отменить заказ и изменить адрес ,и вновь заказать",
+    },
+    {
+      question: "Мне не подошел размер,что мне делать",
+      answer: "Вы можете вернуть вашу покупку и взять другую ",
+    },
+    {
+      question:
+        "Покупатель заявил, что посылка содержала не его заказ, но я отправил все верно, что делать?",
+      answer: "объяснить клиенту ,что это его заказ,или же показать ему чек",
+    },
+    {
+      question: "Покупатель не забирает посылку",
+      answer: "Отправить заказ на ег адрес сново",
+    },
+    {
+      question: "Покупатель не подтверждает получение посылки",
+      answer: "Не отдавать заказ ,пока не подтвердит",
+    },
+    {
+      question: "Покупатель оплатил уже проданный товар",
+    },
+  ];
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <Search />
+      <Main text="FAQ" op="Я-покупатель" prod="Я-продавец" />
+
+      {questionsAndAnswers.map((qa, index) => (
+        <Question key={index} question={qa.question} answer={qa.answer} />
+      ))}
+      <Footer />
     </div>
   );
 }

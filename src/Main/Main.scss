@@ -1,0 +1,38 @@
+
+.main-block{
+    width: 1440px;    
+    justify-content: center;
+    align-items: center;
+    display: inline-block;
+    height: 150px;
+    position: relative;
+    .props-first{
+        font-size: 36px;
+        color: black;
+        font-weight: 700;
+        float: left;
+        margin-top: 2rem;
+        position: relative;
+        position: absolute;
+    }
+    .main-pokup>p{
+        font-size: 24px;
+        font-weight: 700;
+        color: #7984C0;
+        float: left;
+        position: relative;
+        position: absolute;
+        top: 8rem;
+    }
+    .main-pokup>span{
+        font-size: 24px;
+        font-weight: 700;
+        color: #7984C0;
+        position: absolute;
+
+        justify-content: center;
+        align-items: center;
+        margin-left: 15rem;
+        top: 8rem;
+    }
+}
